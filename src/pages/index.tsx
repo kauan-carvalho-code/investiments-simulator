@@ -1,17 +1,20 @@
 import Head from "next/head";
+import Simulator from "../components/Simulator";
 
 function Home() {
   return (
     <div>
       <Head>
-        <title>NEXTJS-TEMPLATE</title>
+        <title>Simulador de Investimentos</title>
         <meta name="description" content="created by: Kauan Carvalho" />
       </Head>
       <body>
-        <h1>
-          Next.js template using: Typescript, Styled-components, eslint and
-          prettier
-        </h1>
+        <header>
+          <h1>Simulador de Investimentos</h1>
+        </header>
+        <main>
+          <Simulator />
+        </main>
       </body>
     </div>
   );
