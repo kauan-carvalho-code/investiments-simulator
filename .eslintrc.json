@@ -27,6 +27,7 @@
     ],
     "rules": {
       "@typescript-eslint/no-unused-vars": "error",
+      "react/require-default-props": "off",
       "@typescript-eslint/no-explicit-any": "error",
       "react/react-in-jsx-scope": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".ts", ".js", ".jsx", ".tsx"] }],

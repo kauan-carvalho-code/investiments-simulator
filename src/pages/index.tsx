@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Simulator from "../components/Simulator";
+import { Header, Main } from "../styles/Home";
 
 function Home() {
   return (
@@ -9,12 +10,12 @@ function Home() {
         <meta name="description" content="created by: Kauan Carvalho" />
       </Head>
       <body>
-        <header>
+        <Header>
           <h1>Simulador de Investimentos</h1>
-        </header>
-        <main>
+        </Header>
+        <Main>
           <Simulator />
-        </main>
+        </Main>
       </body>
     </div>
   );
