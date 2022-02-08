@@ -17,7 +17,6 @@ export default function Input({
   return (
     <Label>
       <Title>{title}</Title>
-
       <InputContent
         type="number"
         placeholder={placeholder}

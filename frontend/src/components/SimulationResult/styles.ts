@@ -13,6 +13,7 @@ export const CardsContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
   row-gap: 30px;
+  margin-bottom: 1.6rem;
 `;
 
 export const GraphicContainer = styled.div``;

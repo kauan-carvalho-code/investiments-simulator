@@ -4,7 +4,7 @@ import IndexingTypes from "../IndexingTypes";
 import { Button, ButtonsContainer, Container, Content, Header } from "./styles";
 
 export default function Simulator() {
-  const { clearSimulator } = useSimulator();
+  const { clearSimulator, simulate, incomeType, indexingType } = useSimulator();
 
   return (
     <Container>
@@ -19,7 +19,11 @@ export default function Simulator() {
         <Button onClick={clearSimulator} type="button">
           Limpar Campos
         </Button>
-        <Button type="button" className="simulate">
+        <Button
+          type="button"
+          className="simulate"
+          onClick={() => simulate(incomeType, indexingType)}
+        >
           Simular
         </Button>
       </ButtonsContainer>

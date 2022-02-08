@@ -4,9 +4,12 @@ import React, {
   ReactNode,
   SetStateAction,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from "react";
+import api from "../services/api";
+import { IIndicator, ISimulation } from "../types";
 
 interface SimulatorProviderProps {
   children: ReactNode;
@@ -30,6 +33,8 @@ interface SimulatorContextData {
   cdiValue: number;
   setCdiValue: Dispatch<SetStateAction<number>>;
   clearSimulator: () => void;
+  simulate: (income: string, indexing: string) => void;
+  simulation: ISimulation;
 }
 
 const SimulatorContext = createContext<SimulatorContextData>(
@@ -37,18 +42,37 @@ const SimulatorContext = createContext<SimulatorContextData>(
 );
 
 export function SimulatorProvider({ children }: SimulatorProviderProps) {
-  const [incomeType, setIncomeType] = useState("gross");
-  const [indexingType, setIndexingType] = useState("PRÉ");
+  const [incomeType, setIncomeType] = useState("bruto");
+  const [indexingType, setIndexingType] = useState("pre");
   const [initialContribution, setInitialContribution] = useState(0);
   const [monthlyContribution, setMonthlyContribution] = useState(0);
   const [deadline, setDeadline] = useState(0);
   const [profitability, setProfitability] = useState(0);
   const [ipcaValue, setIpcaValue] = useState(0);
   const [cdiValue, setCdiValue] = useState(0);
+  const [simulation, setSimulation] = useState<ISimulation>();
+
+  useEffect(() => {
+    api.get("/indicadores").then(({ data }) =>
+      data.forEach((curr: IIndicator) => {
+        if (curr.nome === "cdi") {
+          setCdiValue(curr.valor);
+          return;
+        }
+        setIpcaValue(curr.valor);
+      })
+    );
+  }, []);
+
+  const simulate = (income: string, indexing: string) => {
+    api
+      .get(`/simulacoes?tipoIndexacao=${indexing}&tipoRendimento=${income}`)
+      .then(({ data }) => setSimulation(data));
+  };
 
   const clearSimulator = () => {
-    setIncomeType("gross");
-    setIndexingType("PRÉ");
+    setIncomeType("bruto");
+    setIndexingType("pre");
     setInitialContribution(0);
     setMonthlyContribution(0);
     setDeadline(0);
@@ -76,6 +100,8 @@ export function SimulatorProvider({ children }: SimulatorProviderProps) {
       cdiValue,
       setCdiValue,
       clearSimulator,
+      simulate,
+      simulation,
     }),
     [
       incomeType,
@@ -86,6 +112,7 @@ export function SimulatorProvider({ children }: SimulatorProviderProps) {
       profitability,
       ipcaValue,
       cdiValue,
+      simulation,
     ]
   );
 

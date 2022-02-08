@@ -8,22 +8,22 @@ export default function IndexingTypesSelector() {
   return (
     <Container>
       <Option
-        className={`left ${indexingType === "PRÉ" ? "isActive" : ""}`}
-        onClick={() => setIndexingType("PRÉ")}
+        className={`left ${indexingType === "pre" ? "isActive" : ""}`}
+        onClick={() => setIndexingType("pre")}
       >
         <AiOutlineCheck />
         <p>PRÉ</p>
       </Option>
       <Option
-        className={indexingType === "POS" ? "isActive" : ""}
-        onClick={() => setIndexingType("POS")}
+        className={indexingType === "pos" ? "isActive" : ""}
+        onClick={() => setIndexingType("pos")}
       >
         <AiOutlineCheck />
         <p>POS</p>
       </Option>
       <Option
-        className={`right ${indexingType === "fixed" ? "isActive" : ""}`}
-        onClick={() => setIndexingType("fixed")}
+        className={`right ${indexingType === "ipca" ? "isActive" : ""}`}
+        onClick={() => setIndexingType("ipca")}
       >
         <AiOutlineCheck />
         <p>FIXADO</p>

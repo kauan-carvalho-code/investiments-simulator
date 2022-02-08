@@ -8,15 +8,15 @@ export default function IncomeSelect() {
   return (
     <Container>
       <Option
-        className={`left ${incomeType === "gross" ? "isActive" : ""}`}
-        onClick={() => setIncomeType("gross")}
+        className={`left ${incomeType === "bruto" ? "isActive" : ""}`}
+        onClick={() => setIncomeType("bruto")}
       >
         <AiOutlineCheck />
         <p>Bruto</p>
       </Option>
       <Option
-        className={`right ${incomeType === "liquid" ? "isActive" : ""}`}
-        onClick={() => setIncomeType("liquid")}
+        className={`right ${incomeType === "liquido" ? "isActive" : ""}`}
+        onClick={() => setIncomeType("liquido")}
       >
         <AiOutlineCheck />
         <p>Líquido</p>
