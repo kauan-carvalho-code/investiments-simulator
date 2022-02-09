@@ -2,7 +2,7 @@
   "name": "next_typescrit_styled-components-template",
   "private": true,
   "scripts": {
-    "docker": "docker run --publish 3000:3000 investiments-simulator",
+    "docker": "docker run --publish 3000:3000 kauan1102/investiments-simulator",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
