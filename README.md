@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) template using [TypeScript](https://www.typescriptlang.org/), [Styled-Components](https://styled-components.com/), [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/).
+This is a [Next.js](https://nextjs.org/) application using [TypeScript](https://www.typescriptlang.org/), [Styled-Components](https://styled-components.com/), [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/).
 
 ## Getting Started
 
