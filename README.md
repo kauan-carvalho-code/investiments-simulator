@@ -12,6 +12,8 @@ This is a [Next.js](https://nextjs.org/) application using [TypeScript](https://
 
 [Prettier](https://prettier.io/) is an opinionated code formatter. It enforces a consistent style by parsing your code and reprinting it with its own rules that take into account the maximum line length, wrapping the code when necessary.
 
+[Docker](https://www.docker.com/) enables developers to easily pack, ship, and run any application as a lightweight, portable, self-sufficient container, which can run virtually anywhere. As Bottomley told me, "Containers gives you instant application portability.
+
 ## Getting Started
 
 install the dependencies:
