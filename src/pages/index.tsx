@@ -1,8 +1,9 @@
 import Head from "next/head";
+import SimulationResult from "../components/SimulationResult";
 import Simulator from "../components/Simulator";
 import { Header, Main } from "../styles/Home";
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -15,10 +16,9 @@ function Home() {
         </Header>
         <Main>
           <Simulator />
+          <SimulationResult />
         </Main>
       </body>
     </div>
   );
 }
-
-export default Home;

@@ -1,29 +1,29 @@
-import { useState } from "react";
 import { AiOutlineCheck } from "react-icons/ai";
+import { useSimulator } from "../../hooks/useSimulator";
 import { Container, Option } from "./styles";
 
 export default function IndexingTypesSelector() {
-  const [selected, setSelected] = useState("PRÉ");
+  const { indexingType, setIndexingType } = useSimulator();
 
   return (
     <Container>
       <Option
-        className={`left ${selected === "PRÉ" ? "isActive" : ""}`}
-        onClick={() => setSelected("PRÉ")}
+        className={`left ${indexingType === "pre" ? "isActive" : ""}`}
+        onClick={() => setIndexingType("pre")}
       >
         <AiOutlineCheck />
         <p>PRÉ</p>
       </Option>
       <Option
-        className={selected === "POS" ? "isActive" : ""}
-        onClick={() => setSelected("POS")}
+        className={indexingType === "pos" ? "isActive" : ""}
+        onClick={() => setIndexingType("pos")}
       >
         <AiOutlineCheck />
         <p>POS</p>
       </Option>
       <Option
-        className={`right ${selected === "fixed" ? "isActive" : ""}`}
-        onClick={() => setSelected("fixed")}
+        className={`right ${indexingType === "ipca" ? "isActive" : ""}`}
+        onClick={() => setIndexingType("ipca")}
       >
         <AiOutlineCheck />
         <p>FIXADO</p>

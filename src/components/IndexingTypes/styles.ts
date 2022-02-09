@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 14rem;
-  margin-left: 4rem;
+  width: 45%;
+
+  @media only screen and (max-width: 540px) {
+    width: 40%;
+  }
 `;
 
 export const Header = styled.div`

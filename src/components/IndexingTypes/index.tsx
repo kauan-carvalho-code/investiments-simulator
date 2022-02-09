@@ -1,10 +1,20 @@
 import { IoIosInformationCircleOutline } from "react-icons/io";
-import CurrencyInputText from "../CurrencyInputText";
+import { useSimulator } from "../../hooks/useSimulator";
+import CurrencyInputText from "../CurrencyInput";
 import IndexingTypesSelector from "../IndexingTypesSelector";
-import InputText from "../InputText";
+import InputText from "../Input";
 import { Container, Content, Header } from "./styles";
 
 export default function IndexingTypes() {
+  const {
+    monthlyContribution,
+    setMonthlyContribution,
+    profitability,
+    setProfitability,
+    cdiValue,
+    setCdiValue,
+  } = useSimulator();
+
   return (
     <Container>
       <Header>
@@ -13,9 +23,22 @@ export default function IndexingTypes() {
       </Header>
       <Content>
         <IndexingTypesSelector />
-        <CurrencyInputText title="Aporte Mensal" />
-        <InputText title="Rentabilidade" />
-        <InputText title="CDI (ao ano)" />
+        <CurrencyInputText
+          title="Aporte Mensal"
+          value={monthlyContribution}
+          onChange={setMonthlyContribution}
+        />
+        <InputText
+          title="Rentabilidade"
+          value={profitability}
+          onChange={setProfitability}
+        />
+        <InputText
+          title="CDI (ao ano)"
+          value={cdiValue}
+          onChange={setCdiValue}
+          disabled
+        />
       </Content>
     </Container>
   );

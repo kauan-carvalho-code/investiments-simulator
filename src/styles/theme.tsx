@@ -3,8 +3,10 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
-    background: "#dbdbdb",
+    background: "#ebebeb",
     orange600: "#eb783f",
+    gray200: "#f2f2f2",
+    gray600: "#c4c4c4",
   },
 };
 
