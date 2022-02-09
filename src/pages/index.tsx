@@ -8,7 +8,8 @@ export default function Home() {
     <div>
       <Head>
         <title>Simulador de Investimentos</title>
-        <meta name="description" content="created by: Kauan Carvalho" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body>
         <Header>
