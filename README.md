@@ -16,6 +16,9 @@ This is a [Next.js](https://nextjs.org/) application using [TypeScript](https://
 
 ## Getting Started
 
+
+to run this project you need to use a fake api [Link](https://github.com/eqi-investimentos/desafio-fake-api)
+
 install the dependencies:
 
 ```bash
