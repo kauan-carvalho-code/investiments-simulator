@@ -37,6 +37,7 @@ export default function IndexingTypes() {
           title="CDI (ao ano)"
           value={cdiValue}
           onChange={setCdiValue}
+          disabled
         />
       </Content>
     </Container>

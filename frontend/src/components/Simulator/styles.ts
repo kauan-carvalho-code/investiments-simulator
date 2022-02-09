@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.form`
   width: 480px;
+
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 `;
 
 export const Header = styled.div`
@@ -31,6 +36,10 @@ export const Button = styled.button`
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+
+  @media only screen and (max-width: 540px) {
+    width: 37.5%;
+  }
 
   &:hover {
     filter: brightness(0.9);

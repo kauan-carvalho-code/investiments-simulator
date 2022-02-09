@@ -77,8 +77,6 @@ export function SimulatorProvider({ children }: SimulatorProviderProps) {
     setMonthlyContribution(0);
     setDeadline(0);
     setProfitability(0);
-    setIpcaValue(0);
-    setCdiValue(0);
   };
 
   const SimulatorContextValue = useMemo(

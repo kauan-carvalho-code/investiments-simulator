@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 45%;
+
+  @media only screen and (max-width: 540px) {
+    width: 40%;
+  }
 `;
 
 export const Header = styled.div`

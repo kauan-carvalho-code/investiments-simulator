@@ -6,6 +6,7 @@ interface InputProps {
   placeholder?: string;
   value: number;
   onChange: Dispatch<SetStateAction<number>>;
+  disabled?: boolean;
 }
 
 export default function Input({
@@ -13,6 +14,7 @@ export default function Input({
   placeholder = "",
   value,
   onChange,
+  disabled,
 }: InputProps) {
   return (
     <Label>
@@ -21,6 +23,7 @@ export default function Input({
         type="number"
         placeholder={placeholder}
         value={value}
+        disabled={disabled}
         onChange={(e) => onChange(+e.currentTarget.value)}
       />
     </Label>

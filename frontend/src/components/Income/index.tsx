@@ -37,6 +37,7 @@ export default function Income() {
           title="IPCA (ao ano)"
           value={ipcaValue}
           onChange={setIpcaValue}
+          disabled
         />
       </Content>
     </Container>
