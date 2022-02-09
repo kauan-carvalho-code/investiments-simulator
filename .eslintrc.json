@@ -8,6 +8,7 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended",
         "plugin:prettier/recommended",
         "airbnb",
         "prettier"

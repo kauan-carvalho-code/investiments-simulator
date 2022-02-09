@@ -5,7 +5,7 @@ interface InputProps {
   title: string;
   placeholder?: string;
   value: number;
-  onChange: Dispatch<SetStateAction<number>>;
+  onChange?: Dispatch<SetStateAction<number>>;
   disabled?: boolean;
 }
 

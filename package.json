@@ -2,6 +2,7 @@
   "name": "next_typescrit_styled-components-template",
   "private": true,
   "scripts": {
+    "docker": "docker run --publish 3000:3000 investiments-simulator",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -17,6 +18,7 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.0.10",
     "@types/node": "17.0.15",
     "@types/react": "17.0.39",
     "@types/react-currency-format": "^1.0.0",
