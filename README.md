@@ -1,7 +1,4 @@
 <h1>Investiments Simulator</h1>
-
-a project using nextjs that simulates investments.
-
 ## Technologies used
 
 [Next.js](https://nextjs.org/) is a React framework focused on production and efficiency created and maintained by the Vercel team, Nextjs seeks to bring together several features such as hybrid and static content rendering, TypeScript support, pre-fetching, routing system, feature packs and several plugins and examples to speed up your development providing a complete framework for you to start your project.
